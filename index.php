@@ -275,44 +275,51 @@
     </script>
 
 <script>
-    function guardarSeleccion(tablaId) {
-        var checkboxes = document.querySelectorAll('#' + tablaId + ' input[type="checkbox"]');
-        var nombreSeleccionado = '';
+    function guardarSelecciones() {
+        var selecciones = [];
 
-        checkboxes.forEach(function (checkbox) {
-            if (checkbox.checked) {
-                nombreSeleccionado = checkbox.id.replace('check', ''); // Extraer el nombre
-            }
+        // Recorre todas las tablas
+        var tablas = document.querySelectorAll('table');
+
+        tablas.forEach(function (tabla, indiceTabla) {
+            // Encuentra la categoría de la tabla
+            var categoria = tabla.id;
+
+            // Recorre las filas de la tabla
+            var filas = tabla.querySelectorAll('tr.opcion');
+
+            filas.forEach(function (fila, indiceFila) {
+                // Encuentra el nombre y verifica si está seleccionado
+                var nombre = fila.querySelector('input[type="checkbox"]').id.substring(5); // Elimina "check" del ID
+                var seleccionado = fila.querySelector('input[type="checkbox"]').checked;
+
+                // Si está seleccionado, agrega a la lista de selecciones
+                if (seleccionado) {
+                    selecciones.push({
+                        categoria: categoria,
+                        nombre: nombre
+                    });
+                }
+            });
         });
 
-        if (nombreSeleccionado !== '') {
-            // Agregar la fila al array de selecciones
-            selecciones.push({ categoria: tablaId, nombre: nombreSeleccionado });
-
-            // Mostrar el nombre seleccionado en el campo de texto
-            var nombreSeleccionadoInput = document.getElementById('nombreSeleccionado');
-            nombreSeleccionadoInput.value = 'Nombre seleccionado: ' + nombreSeleccionado;
-        }
+        // Envía las selecciones al servidor
+        fetch('guardar_selecciones.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(selecciones),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Muestra una alerta o realiza acciones adicionales si es necesario
+            console.log('Selecciones guardadas exitosamente', data);
+        })
+        .catch((error) => {
+            console.error('Error al guardar selecciones:', error);
+        });
     }
-
-    function guardarEnServidor() {
-        // Enviar las selecciones al servidor mediante Ajax
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'guardar_selecciones.php', true);
-        xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-
-        xhr.onload = function () {
-            if (xhr.status === 200) {
-                alert('Selecciones guardadas exitosamente');
-            } else {
-                alert('Error al guardar las selecciones');
-            }
-        };
-
-        xhr.send(JSON.stringify(selecciones));
-    }
-
-    var selecciones = []; // Array para almacenar las selecciones
 </script>
 
 
