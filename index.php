@@ -50,7 +50,7 @@
                 echo '<label for="check' . $nombre . '" onclick="bloquearOtrasOpciones(this)">';
                 echo   '<img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"> ';
                 echo '</label>';
-                echo '<input type="checkbox" id="opcion' . $nombre . '" onclick="seleccionarUnico('"opcion1"')">';
+                echo '<input type="checkbox" id="opcion' . $nombre . '" onchange="seleccionarUnico(this)">';
                 echo '</td>';
             }
             ?>
