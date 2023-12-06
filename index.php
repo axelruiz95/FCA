@@ -277,6 +277,51 @@
             });
     </script>
 
+<script>
+    function guardarSeleccion() {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var nombreSeleccionado = '';
+
+        checkboxes.forEach(function (checkbox) {
+            if (checkbox.checked) {
+                nombreSeleccionado = checkbox.id.replace('check', ''); // Extraer el nombre
+            }
+        });
+
+        if (nombreSeleccionado !== '') {
+            // Crear el botón y el campo de texto
+            var guardarBtn = document.getElementById('guardarBtn');
+            var nombreSeleccionadoInput = document.getElementById('nombreSeleccionado');
+            var csvContent = 'data:text/csv;charset=utf-8,Categoria,Nombre\n';
+
+            // Agregar la fila al CSV
+            csvContent += 'El Más Prieto,' + nombreSeleccionado + '\n';
+
+            // Crear el enlace de descarga
+            var encodedUri = encodeURI(csvContent);
+            var link = document.createElement('a');
+            link.setAttribute('href', encodedUri);
+            link.setAttribute('download', 'seleccion.csv');
+            document.body.appendChild(link);
+
+            // Simular clic en el enlace para iniciar la descarga
+            link.click();
+
+            // Ocultar el botón después de guardar
+            guardarBtn.style.display = 'none';
+
+            // Desactivar los demás checkboxes
+            checkboxes.forEach(function (checkbox) {
+                checkbox.disabled = true;
+            });
+
+            // Mostrar el nombre seleccionado en el campo de texto
+            nombreSeleccionadoInput.value = 'Nombre seleccionado: ' + nombreSeleccionado;
+        }
+    }
+</script>
+
+
     <script src="script.js"></script> 
 
     <script>
