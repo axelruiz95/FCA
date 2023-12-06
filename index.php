@@ -254,7 +254,7 @@
             ?>
         </tr>
     </table>
-
+    <button id="guardarBtn" onclick="guardarSelecciones()">Guardar Selecciones</button>
     <script>
         function seleccionarUnico(id) {
             var checkboxes = document.querySelectorAll('input[type="checkbox"]');
