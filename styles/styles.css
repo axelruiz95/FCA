@@ -131,6 +131,9 @@ td img {
 td:hover .overlay {
     opacity: 1;
 }
+td:hover .text-overlay {
+            display: block;
+        }
 
 #encabezado {
     position: -webkit-sticky;
