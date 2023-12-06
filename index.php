@@ -20,7 +20,7 @@
     </table>
 
     <div id="centradoDiv">
-        <button id="botonMostrar" onclick="mostrarTabla()" class="my-button">Mostrar Categorias</button>
+    <button id="botonMostrarCategorias" onclick="mostrarTodasLasTablas()"  class="my-button">Mostrar Categorias</button>
     </div>
 
     <table id="miTabla">
@@ -43,10 +43,6 @@
         </tr>
     </table>
 
-    <div id="centradoDiv">
-        <button id="botonSiguiente" onclick="mostrarSegundaTabla()" class="my-button1">Siguiente Categoría</button>
-    </div>
-
     <table id="segundaTabla" style="display: none;">
         <tr>
             <td colspan="3"><h1>El Más Guap@</h1></td>
@@ -66,10 +62,6 @@
             ?>
         </tr>
     </table>
-
-    <div id="centradoDiv">
-        <button id="botonSiguiente2" onclick="mostrarTabla('Buena', 'botonSiguiente2', 'botonSiguiente3')" style="display: none;" class="my-button1">Siguiente Categoría</button>
-    </div>
 
     <table id="Buena">
         <tr>
@@ -289,26 +281,15 @@
             });
     </script>
     <script src="script.js"></script> 
+
     <script>
-
-        function mostrarBotonSiguiente(checkbox, botonSiguienteID) {
-            var botonSiguiente = document.getElementById(botonSiguienteID);
-            var botonMostrar = document.getElementById("botonMostrar");
-
-            botonSiguiente.style.display = checkbox.checked ? "inline-block" : "none";
-            botonMostrar.style.display = checkbox.checked ? "none" : "block";
+        function mostrarTodasLasTablas() {
+            var tablas = document.querySelectorAll('table');
+            tablas.forEach(function(tabla) {
+                tabla.style.display = "table";
+            });
         }
-
-        function mostrarTabla() {
-            var tabla = document.getElementById("miTabla");
-            var botonMostrar = document.getElementById("botonMostrar");
-        
-            botonMostrar.style.display = "none";
-        
-            tabla.style.display = "table";
-        }
-
     </script>
-    
+
 </body>
 </html>
