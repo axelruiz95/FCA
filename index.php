@@ -13,7 +13,7 @@
 
     <table>
         <div  id="centradoDiv">
-            <div><h1>Esta son las nominaciones de la Posada 2023 el degenere</h1></div>
+            <div><h1>Esta son las nominaciones de la Posada 2023</h1></div>
         </div>
         <div class="cat">
             <div><h1>Categorias a elegir</h1></div>
