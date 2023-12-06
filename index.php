@@ -47,7 +47,7 @@
         <tr>
             <td colspan="3"><h1>El Más Guap@</h1></td>
         </tr>
-        <tr>
+        <tr class="opcion">
             <?php
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
@@ -66,7 +66,7 @@
         <tr>
             <td colspan="3"><h1>El Más Buena Onda</h1></td>
         </tr>
-        <tr>
+        <tr class="opcion">
         <?php
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
@@ -85,7 +85,7 @@
         <tr>
             <td colspan="3"><h1>El Más Odioso</h1></td>
         </tr>
-        <tr>
+        <tr class="opcion">
         <?php
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
@@ -105,7 +105,7 @@
         <tr>
             <td colspan="3"><h1>El Más Puto o Todas mías</h1></td>
         </tr>
-        <tr>
+        <tr class="opcion">
         <?php
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
@@ -125,7 +125,7 @@
         <tr>
             <td colspan="3"><h1>El Más Borracho</h1></td>
         </tr>
-        <tr>
+        <tr class="opcion">
         <?php
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
@@ -145,7 +145,7 @@
         <tr>
             <td colspan="3"><h1>El Más Mala Copa</h1></td>
         </tr>
-        <tr>
+        <tr class="opcion">
         <?php
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
@@ -164,7 +164,7 @@
         <tr>
             <td colspan="3"><h1>El Más Fiester@</h1></td>
         </tr>
-        <tr>
+        <tr class="opcion">
         <?php
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
@@ -183,7 +183,7 @@
         <tr>
             <td colspan="3"><h1>El Más Intens@</h1></td>
         </tr>
-        <tr>
+        <tr class="opcion">
         <?php
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
@@ -202,7 +202,7 @@
         <tr>
             <td colspan="3"><h1>El Más Carismatico</h1></td>
         </tr>
-        <tr>
+        <tr class="opcion">
         <?php
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
@@ -221,7 +221,7 @@
         <tr>
             <td colspan="3"><h1>El Más Peleoner@</h1></td>
         </tr>
-        <tr>
+        <tr class="opcion">
         <?php
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
@@ -240,7 +240,7 @@
         <tr>
             <td colspan="3"><h1>El Más Venenos@</h1></td>
         </tr>
-        <tr>
+        <tr class="opcion">
         <?php
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
