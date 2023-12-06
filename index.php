@@ -20,7 +20,7 @@
         </div>
     </table>
     
-    <table id="miTabla">
+    <table id="Prieto">
         <tr>
             <td colspan="3"><h1>El Más Prieto</h1></td>
         </tr>
@@ -38,12 +38,15 @@
                 echo '</label>';
                 echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
                 echo '</td>';
+                echo '<button id="guardarBtn" onclick="guardarSeleccion()">Guardar Selección</button>';
+                echo '<input type="text" id="nombreSeleccionado" placeholder="Nombre seleccionado" readonly>';
+
             }
             ?>
         </tr>
     </table>
 
-    <table id="segundaTabla" style="display: none;">
+    <table id="Guapo" style="display: none;">
         <tr>
             <td colspan="3"><h1>El Más Guap@</h1></td>
         </tr>
