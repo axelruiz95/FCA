@@ -20,7 +20,6 @@
         </div>
     </table>
 
-    
     <table id="miTabla">
         <tr>
             <td colspan="3"><h1>El Más Prieto</h1></td>
@@ -255,7 +254,7 @@
             ?>
         </tr>
     </table>
-    
+
     <script>
         fetch('styles/header.html')
             .then(response => response.text())
