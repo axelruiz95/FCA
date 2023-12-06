@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FCA</title>
-    <link rel="stylesheet" href="styles\styles.css"> 
+    <link rel="stylesheet" href="styles\styles.css">
+    
 </head>
 <body>
 
@@ -20,25 +21,25 @@
     </table>
 
     <div id="centradoDiv">
-    <button id="botonMostrarCategorias" onclick="mostrarTodasLasTablas()"  class="my-button">Mostrar Categorias</button>
+        <td colspan="3"><h1>El Más Prieto</h1></td>
     </div>
-
     <table id="miTabla">
-        <tr>
-            <td colspan="3"><h1>El Más Prieto</h1></td>
-        </tr>
-        <tr>
-        <?php
-                // Genera 3 opciones con las imágenes
-                $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
-                shuffle($nombres);
-                foreach ($nombres as $nombre) {
-                    echo '<td>';
-                    echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
-                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '"></label>';
-                    echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
-                    echo '</td>';
-                }
+        
+        <tr class="opcion">
+            <?php
+            $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
+            shuffle($nombres);
+
+            for ($i = 0; $i < 21; $i++) {
+                $nombre = $nombres[$i];
+                echo '<td class="opcion">';
+                echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
+                echo '<label for="check' . $nombre . '" c>';
+                echo   '<img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;">';
+                echo '</label>';
+                echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
+                echo '</td>';
+            }
             ?>
         </tr>
     </table>
@@ -49,13 +50,12 @@
         </tr>
         <tr>
             <?php
-                // Genera 3 opciones con las imágenes
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
                 foreach ($nombres as $nombre) {
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
-                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '"></label>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
                     echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
                     echo '</td>';
                 }
@@ -69,13 +69,12 @@
         </tr>
         <tr>
         <?php
-                // Genera 3 opciones con las imágenes
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
                 foreach ($nombres as $nombre) {
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
-                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '"></label>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
                     echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
                     echo '</td>';
                 }
@@ -89,13 +88,12 @@
         </tr>
         <tr>
         <?php
-                // Genera 3 opciones con las imágenes
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
                 foreach ($nombres as $nombre) {
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
-                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '"></label>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
                     echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
                     echo '</td>';
                 }
@@ -110,13 +108,12 @@
         </tr>
         <tr>
         <?php
-                // Genera 3 opciones con las imágenes
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
                 foreach ($nombres as $nombre) {
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
-                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '"></label>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
                     echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
                     echo '</td>';
                 }
@@ -131,13 +128,12 @@
         </tr>
         <tr>
         <?php
-                // Genera 3 opciones con las imágenes
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
                 foreach ($nombres as $nombre) {
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
-                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '"></label>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
                     echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
                     echo '</td>';
                 }
@@ -152,13 +148,12 @@
         </tr>
         <tr>
         <?php
-                // Genera 3 opciones con las imágenes
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
                 foreach ($nombres as $nombre) {
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
-                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '"></label>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
                     echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
                     echo '</td>';
                 }
@@ -172,13 +167,12 @@
         </tr>
         <tr>
         <?php
-                // Genera 3 opciones con las imágenes
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
                 foreach ($nombres as $nombre) {
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
-                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '"></label>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
                     echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
                     echo '</td>';
                 }
@@ -192,13 +186,12 @@
         </tr>
         <tr>
         <?php
-                // Genera 3 opciones con las imágenes
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
                 foreach ($nombres as $nombre) {
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
-                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '"></label>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
                     echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
                     echo '</td>';
                 }
@@ -212,13 +205,12 @@
         </tr>
         <tr>
         <?php
-                // Genera 3 opciones con las imágenes
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
                 foreach ($nombres as $nombre) {
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
-                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '"></label>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
                     echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
                     echo '</td>';
                 }
@@ -232,13 +224,12 @@
         </tr>
         <tr>
         <?php
-                // Genera 3 opciones con las imágenes
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
                 foreach ($nombres as $nombre) {
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
-                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '"></label>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
                     echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
                     echo '</td>';
                 }
@@ -252,13 +243,12 @@
         </tr>
         <tr>
         <?php
-                // Genera 3 opciones con las imágenes
                 $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
                 shuffle($nombres);
                 foreach ($nombres as $nombre) {
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
-                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '"></label>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
                     echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
                     echo '</td>';
                 }
@@ -267,6 +257,32 @@
     </table>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var imagenesAmpliadas = document.querySelectorAll('.imagen-ampliada');
+            imagenesAmpliadas.forEach(function (imagenAmpliada) {
+                imagenAmpliada.addEventListener('click', function () {
+                    imagenAmpliada.style.display = 'none';
+                });
+            });
+
+            var triggers = document.querySelectorAll('.imagen-ampliada-trigger');
+            triggers.forEach(function (trigger) {
+                trigger.addEventListener('click', function (event) {
+                    var imagenAmpliada = trigger.nextElementSibling;
+                    var imagenAmpliadaImg = imagenAmpliada.querySelector('img');
+                    var cerrarBtn = document.createElement('div');
+                    cerrarBtn.innerHTML = '✕';
+                    cerrarBtn.className = 'cerrar';
+                    cerrarBtn.addEventListener('click', function () {
+                        imagenAmpliada.style.display = 'none';
+                    });
+                    imagenAmpliada.appendChild(cerrarBtn);
+
+                    imagenAmpliada.style.display = 'flex';
+                });
+            });
+        });
+
         function mostrarBotonSiguiente(checkbox) {
             // Implementa la lógica según tus necesidades
             // Puedes modificar esta función para que haga lo que desees al seleccionar un checkbox
@@ -280,6 +296,7 @@
                 document.getElementById('header-container').innerHTML = html;
             });
     </script>
+
     <script src="script.js"></script> 
 
     <script>

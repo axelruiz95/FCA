@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FCA</title>
-    <link rel="stylesheet" href="styles\styles.css"> 
+    <link rel="stylesheet" href="styles\styles.css">
+    
 </head>
 <body>
 
@@ -20,60 +21,276 @@
     </table>
 
     <div id="centradoDiv">
-        <button id="botonMostrar" onclick="mostrarTabla()" class="my-button">Mostrar Categorias</button>
+    <button id="botonMostrarCategorias" onclick="mostrarTodasLasTablas()"  class="my-button">Mostrar Categorias</button>
     </div>
 
     <table id="miTabla">
-        <tr>
+        <tr id="encabezado">
             <td colspan="3"><h1>El Más Prieto</h1></td>
         </tr>
-        <tr>
-            <td>
-                <div class="text-overlay">Nombre</div>
-                <label for="check1"><img src="image/imagen2.png" alt="Imagen 1"></label>
-                <input type="checkbox" id="check1" onchange="mostrarBotonSiguiente(this)">
-            </td>
-            <td>
-                <div class="text-overlay">Nombre</div>
-                <label for="check2"><img src="image/imagen2.png" alt="Imagen 2"></label>
-                <input type="checkbox" id="check2" onchange="mostrarBotonSiguiente(this)">
-            </td>
-            <td>
-                <div class="text-overlay">Nombre</div>
-                <label for="check3"><img src="image/imagen2.png" alt="Imagen 3"></label>
-                <input type="checkbox" id="check3" onchange="mostrarBotonSiguiente(this)">
-            </td>
+        <tr class="opcion">
+            <?php
+            $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
+            shuffle($nombres);
+
+            for ($i = 0; $i < 21; $i++) {
+                $nombre = $nombres[$i];
+                echo '<td class="opcion">';
+                echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
+                echo '<label for="check' . $nombre . '" class="imagen-ampliada-trigger">';
+                echo   '<img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 70px; height: 70px;">';
+                echo '</label>';
+                echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
+                echo '</td>';
+            }
+            ?>
         </tr>
     </table>
-
-    <div id="centradoDiv">
-        <button id="botonSiguiente" onclick="mostrarSegundaTabla()" class="my-button1">Siguiente Categoría</button>
-    </div>
 
     <table id="segundaTabla" style="display: none;">
         <tr>
-            <td colspan="3"><h1>El Más Pendejo</h1></td>
+            <td colspan="3"><h1>El Más Guap@</h1></td>
         </tr>
         <tr>
-            <td>
-                <div class="text-overlay">Nombre</div>
-                <label for="check1"><img src="image/imagen3.png" alt="Imagen 1"></label>
-                <input type="checkbox" id="check1" onchange="mostrarBotonSiguiente(this)">
-            </td>
-            <td>
-                <div class="text-overlay">Nombre</div>
-                <label for="check2"><img src="image/imagen3.png" alt="Imagen 2"></label>
-                <input type="checkbox" id="check2" onchange="mostrarBotonSiguiente(this)">
-            </td>
-            <td>
-                <div class="text-overlay">Nombre</div>
-                <label for="check3"><img src="image/imagen3.png" alt="Imagen 3"></label>
-                <input type="checkbox" id="check3" onchange="mostrarBotonSiguiente(this)">
-            </td>
+            <?php
+                $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
+                shuffle($nombres);
+                foreach ($nombres as $nombre) {
+                    echo '<td>';
+                    echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 70px; height: 70px;"></label>';
+                    echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
+                    echo '</td>';
+                }
+            ?>
         </tr>
     </table>
 
-    <div id="footer-container"></div>
+    <table id="Buena">
+        <tr>
+            <td colspan="3"><h1>El Más Buena Onda</h1></td>
+        </tr>
+        <tr>
+        <?php
+                $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
+                shuffle($nombres);
+                foreach ($nombres as $nombre) {
+                    echo '<td>';
+                    echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 70px; height: 70px;"></label>';
+                    echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
+                    echo '</td>';
+                }
+            ?>
+        </tr>
+    </table>
+
+    <table id="Odioso">
+        <tr>
+            <td colspan="3"><h1>El Más Odioso</h1></td>
+        </tr>
+        <tr>
+        <?php
+                $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
+                shuffle($nombres);
+                foreach ($nombres as $nombre) {
+                    echo '<td>';
+                    echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 70px; height: 70px;"></label>';
+                    echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
+                    echo '</td>';
+                }
+            ?>
+        </tr>
+    </table>
+
+
+    <table id="Put">
+        <tr>
+            <td colspan="3"><h1>El Más Puto o Todas mías</h1></td>
+        </tr>
+        <tr>
+        <?php
+                $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
+                shuffle($nombres);
+                foreach ($nombres as $nombre) {
+                    echo '<td>';
+                    echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 70px; height: 70px;"></label>';
+                    echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
+                    echo '</td>';
+                }
+            ?>
+        </tr>
+    </table>
+
+
+    <table id="Borracho">
+        <tr>
+            <td colspan="3"><h1>El Más Borracho</h1></td>
+        </tr>
+        <tr>
+        <?php
+                $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
+                shuffle($nombres);
+                foreach ($nombres as $nombre) {
+                    echo '<td>';
+                    echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 70px; height: 70px;"></label>';
+                    echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
+                    echo '</td>';
+                }
+            ?>
+        </tr>
+    </table>
+
+
+    <table id="Mala">
+        <tr>
+            <td colspan="3"><h1>El Más Mala Copa</h1></td>
+        </tr>
+        <tr>
+        <?php
+                $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
+                shuffle($nombres);
+                foreach ($nombres as $nombre) {
+                    echo '<td>';
+                    echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 70px; height: 70px;"></label>';
+                    echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
+                    echo '</td>';
+                }
+            ?>
+        </tr>
+    </table>
+
+    <table id="Fiestero">
+        <tr>
+            <td colspan="3"><h1>El Más Fiester@</h1></td>
+        </tr>
+        <tr>
+        <?php
+                $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
+                shuffle($nombres);
+                foreach ($nombres as $nombre) {
+                    echo '<td>';
+                    echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 70px; height: 70px;"></label>';
+                    echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
+                    echo '</td>';
+                }
+            ?>
+        </tr>
+    </table>
+
+    <table id="Intenso">
+        <tr>
+            <td colspan="3"><h1>El Más Intens@</h1></td>
+        </tr>
+        <tr>
+        <?php
+                $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
+                shuffle($nombres);
+                foreach ($nombres as $nombre) {
+                    echo '<td>';
+                    echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 70px; height: 70px;"></label>';
+                    echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
+                    echo '</td>';
+                }
+            ?>
+        </tr>
+    </table>
+
+    <table id="Carismatico">
+        <tr>
+            <td colspan="3"><h1>El Más Carismatico</h1></td>
+        </tr>
+        <tr>
+        <?php
+                $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
+                shuffle($nombres);
+                foreach ($nombres as $nombre) {
+                    echo '<td>';
+                    echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 70px; height: 70px;"></label>';
+                    echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
+                    echo '</td>';
+                }
+            ?>
+        </tr>
+    </table>
+
+    <table id="Peleonero">
+        <tr>
+            <td colspan="3"><h1>El Más Peleoner@</h1></td>
+        </tr>
+        <tr>
+        <?php
+                $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
+                shuffle($nombres);
+                foreach ($nombres as $nombre) {
+                    echo '<td>';
+                    echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 70px; height: 70px;"></label>';
+                    echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
+                    echo '</td>';
+                }
+            ?>
+        </tr>
+    </table>
+
+    <table id="Venenoso">
+        <tr>
+            <td colspan="3"><h1>El Más Venenos@</h1></td>
+        </tr>
+        <tr>
+        <?php
+                $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
+                shuffle($nombres);
+                foreach ($nombres as $nombre) {
+                    echo '<td>';
+                    echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
+                    echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 70px; height: 70px;"></label>';
+                    echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
+                    echo '</td>';
+                }
+            ?>
+        </tr>
+    </table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var imagenesAmpliadas = document.querySelectorAll('.imagen-ampliada');
+            imagenesAmpliadas.forEach(function (imagenAmpliada) {
+                imagenAmpliada.addEventListener('click', function () {
+                    imagenAmpliada.style.display = 'none';
+                });
+            });
+
+            var triggers = document.querySelectorAll('.imagen-ampliada-trigger');
+            triggers.forEach(function (trigger) {
+                trigger.addEventListener('click', function (event) {
+                    var imagenAmpliada = trigger.nextElementSibling;
+                    var imagenAmpliadaImg = imagenAmpliada.querySelector('img');
+                    var cerrarBtn = document.createElement('div');
+                    cerrarBtn.innerHTML = '✕';
+                    cerrarBtn.className = 'cerrar';
+                    cerrarBtn.addEventListener('click', function () {
+                        imagenAmpliada.style.display = 'none';
+                    });
+                    imagenAmpliada.appendChild(cerrarBtn);
+
+                    imagenAmpliada.style.display = 'flex';
+                });
+            });
+        });
+
+        function mostrarBotonSiguiente(checkbox) {
+            // Implementa la lógica según tus necesidades
+            // Puedes modificar esta función para que haga lo que desees al seleccionar un checkbox
+        }
+    </script>
 
     <script>
         fetch('styles/header.html')
@@ -82,39 +299,17 @@
                 document.getElementById('header-container').innerHTML = html;
             });
     </script>
+
     <script src="script.js"></script> 
+
     <script>
-        function mostrarTabla() {
-            var tabla = document.getElementById("miTabla");
-            var botonMostrar = document.getElementById("botonMostrar");
-        
-            botonMostrar.style.display = "none";
-        
-            tabla.style.display = "table";
-        }
-
-        function mostrarBotonSiguiente(checkbox) {
-            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-            var botonSiguiente = document.getElementById("botonSiguiente");
-            var botonMostrar = document.getElementById("botonMostrar");
-
-            for (var i = 0; i < checkboxes.length; i++) {
-                checkboxes[i].disabled = true;
-            }
-
-            checkbox.disabled = false;
-
-            botonSiguiente.style.display = checkbox.checked ? "inline-block" : "none";
-
-            botonMostrar.style.display = checkbox.checked ? "none" : "block";
-        }
-
-        function mostrarSegundaTabla() {
-            var segundaTabla = document.getElementById("segundaTabla");
-
-            segundaTabla.style.display = "table";
+        function mostrarTodasLasTablas() {
+            var tablas = document.querySelectorAll('table');
+            tablas.forEach(function(tabla) {
+                tabla.style.display = "table";
+            });
         }
     </script>
-    
+
 </body>
 </html>

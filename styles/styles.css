@@ -53,15 +53,26 @@ label {
 
 #centradoDiv {
     width: 1500px;
-    height: 100px;
+    height: 50px;
     text-align: center;
-    margin-top: 100px; /* Ajusta según el margen que desees */
+    margin-top: 100px; /* Ajusta según el margen que desees 
+    z-index: 1000;
+    position: fixed;*/
+}
+
+#centradoCat {
+  width: 1500px;
+  height: 100px;
+  text-align: center;
+  margin-top: 100px; /* Ajusta según el margen que desees */
 }
 table {
+    width: 500px;
     border-collapse: collapse;
     margin: 20px auto;
-    display: none;
+    display: block;
     margin-top: 10px;
+    overflow-x: auto;
 }
 
 td {
@@ -100,18 +111,7 @@ td img {
     display: block;
     margin: 0 auto;
 }
-.pos {
-    width: 1500px;
-    height: 100px;
-    text-align: center;
-    margin-top: 100px; /* Ajusta según el margen que desees */
-}
-.cat {
-    width: 1500px;
-    height: 50px;
-    text-align: center;
-    margin-top: 10px; /* Ajusta según el margen que desees */
-}
+
 
 .overlay {
     position: absolute;
@@ -132,6 +132,17 @@ td:hover .overlay {
     opacity: 1;
 }
 
+#encabezado {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+  }
+
+  #mostrarMasBtn {
+    margin-top: 10px;
+  }
 .cv-button {
     margin: 20px auto;
     padding: 10px 20px;
@@ -198,3 +209,15 @@ footer a {
 .my-button1:active {
     background-color: #3e8e41;
   }
+.pos {
+    width: 1500px;
+    height: 100px;
+    text-align: center;
+    margin-top: 100px; /* Ajusta según el margen que desees */
+}
+.cat {
+    width: 1500px;
+    height: 50px;
+    text-align: center;
+    margin-top: 10px; /* Ajusta según el margen que desees */
+}
