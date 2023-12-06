@@ -1,0 +1,200 @@
+/* Contenido de styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex; /* Mostrar elementos en línea */
+    justify-content: space-between; /* Distribuir los elementos horizontalmente */
+    align-items: center; /* Centrar verticalmente los elementos */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+#content {
+    margin-top: 60px; /* Ajusta según la altura de tu encabezado */
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Mostrar elementos de la lista en línea */
+}
+
+nav li {
+    margin-right: 20px; /* Ajustar el margen entre elementos si lo deseas */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    padding: 8px 0;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#centradoDiv {
+    width: 1500px;
+    height: 100px;
+    text-align: center;
+    margin-top: 100px; /* Ajusta según el margen que desees */
+}
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    display: none;
+    margin-top: 10px;
+}
+
+td {
+    padding: 10px;
+    position: relative;
+    text-align: center;
+}
+h1 {
+    font-size: 24px;
+    color: #3498db;
+    animation: colorChange 3s infinite alternate;
+  }
+
+  @keyframes colorChange {
+    0% {
+      color: #3498db;
+    }
+    50% {
+      color: #e74c3c;
+    }
+    100% {
+      color: #2ecc71;
+    }
+  }
+
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+td img {
+    max-width: 200px; /* Ajusta el tamaño máximo de la imagen */
+    max-height: 200px; /* Ajusta el tamaño máximo de la imagen */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.pos {
+    width: 1500px;
+    height: 100px;
+    text-align: center;
+    margin-top: 100px; /* Ajusta según el margen que desees */
+}
+.cat {
+    width: 1500px;
+    height: 50px;
+    text-align: center;
+    margin-top: 10px; /* Ajusta según el margen que desees */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(124, 207, 29, 0.7);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+td:hover .overlay {
+    opacity: 1;
+}
+
+.cv-button {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center; 
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+footer p {
+    flex: 1; /* Hace que cada <p> ocupe el mismo espacio */
+    text-align: left;
+    margin: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+.my-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+.my-button:hover {
+    background-color: #45a049;
+  }
+  
+.my-button:active {
+    background-color: #3e8e41;
+  }
+
+.my-button1 {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* El botón está oculto inicialmente */
+}
+.my-button1:hover {
+    background-color: #45a049;
+  }
+  
+.my-button1:active {
+    background-color: #3e8e41;
+  }

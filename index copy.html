@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCA</title>
+    <link rel="stylesheet" href="styles\styles.css"> 
+</head>
+<body>
+
+    <div id="header-container"></div>
+
+    <table>
+        <div  id="centradoDiv">
+            <div><h1>Esta son las nominaciones de la Posada 2023</h1></div>
+        </div>
+        <div class="cat">
+            <div><h1>Categorias a elegir</h1></div>
+        </div>
+    </table>
+
+    <div id="centradoDiv">
+        <button id="botonMostrar" onclick="mostrarTabla()" class="my-button">Mostrar Categorias</button>
+    </div>
+
+    <table id="miTabla">
+        <tr>
+            <td colspan="3"><h1>El Más Prieto</h1></td>
+        </tr>
+        <tr>
+            <td>
+                <div class="text-overlay">Nombre</div>
+                <label for="check1"><img src="image/imagen2.png" alt="Imagen 1"></label>
+                <input type="checkbox" id="check1" onchange="mostrarBotonSiguiente(this)">
+            </td>
+            <td>
+                <div class="text-overlay">Nombre</div>
+                <label for="check2"><img src="image/imagen2.png" alt="Imagen 2"></label>
+                <input type="checkbox" id="check2" onchange="mostrarBotonSiguiente(this)">
+            </td>
+            <td>
+                <div class="text-overlay">Nombre</div>
+                <label for="check3"><img src="image/imagen2.png" alt="Imagen 3"></label>
+                <input type="checkbox" id="check3" onchange="mostrarBotonSiguiente(this)">
+            </td>
+        </tr>
+    </table>
+
+    <div id="centradoDiv">
+        <button id="botonSiguiente" onclick="mostrarSegundaTabla()" class="my-button1">Siguiente Categoría</button>
+    </div>
+
+    <table id="segundaTabla" style="display: none;">
+        <tr>
+            <td colspan="3"><h1>El Más Pendejo</h1></td>
+        </tr>
+        <tr>
+            <td>
+                <div class="text-overlay">Nombre</div>
+                <label for="check1"><img src="image/imagen3.png" alt="Imagen 1"></label>
+                <input type="checkbox" id="check1" onchange="mostrarBotonSiguiente(this)">
+            </td>
+            <td>
+                <div class="text-overlay">Nombre</div>
+                <label for="check2"><img src="image/imagen3.png" alt="Imagen 2"></label>
+                <input type="checkbox" id="check2" onchange="mostrarBotonSiguiente(this)">
+            </td>
+            <td>
+                <div class="text-overlay">Nombre</div>
+                <label for="check3"><img src="image/imagen3.png" alt="Imagen 3"></label>
+                <input type="checkbox" id="check3" onchange="mostrarBotonSiguiente(this)">
+            </td>
+        </tr>
+    </table>
+
+    <div id="footer-container"></div>
+
+    <script>
+        fetch('styles/header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('header-container').innerHTML = html;
+            });
+    </script>
+    <script src="script.js"></script> 
+    <script>
+        function mostrarTabla() {
+            var tabla = document.getElementById("miTabla");
+            var botonMostrar = document.getElementById("botonMostrar");
+        
+            botonMostrar.style.display = "none";
+        
+            tabla.style.display = "table";
+        }
+
+        function mostrarBotonSiguiente(checkbox) {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var botonSiguiente = document.getElementById("botonSiguiente");
+            var botonMostrar = document.getElementById("botonMostrar");
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].disabled = true;
+            }
+
+            checkbox.disabled = false;
+
+            botonSiguiente.style.display = checkbox.checked ? "inline-block" : "none";
+
+            botonMostrar.style.display = checkbox.checked ? "none" : "block";
+        }
+
+        function mostrarSegundaTabla() {
+            var segundaTabla = document.getElementById("segundaTabla");
+
+            segundaTabla.style.display = "table";
+        }
+    </script>
+    
+</body>
+</html>
