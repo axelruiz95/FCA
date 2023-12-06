@@ -131,18 +131,6 @@ td img {
 td:hover .overlay {
     opacity: 1;
 }
-.text-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 5px;
-  display: none;
-}
-
-td:hover .text-overlay {
-  display: block;
-}
 
 #encabezado {
     position: -webkit-sticky;
