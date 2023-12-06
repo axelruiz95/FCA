@@ -21,7 +21,7 @@
     </table>
 
     <div id="centradoDiv">
-        <td colspan="3"><h1>El Más Puto</h1></td>
+        <td colspan="3"><h1>El Más Prieto</h1></td>
     </div>
     <table id="miTabla">
         
