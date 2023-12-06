@@ -38,8 +38,6 @@
                 echo '</label>';
                 echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
                 echo '</td>';
-                
-
             }
             ?>
         </tr>
@@ -277,8 +275,8 @@
     </script>
 
 <script>
-    function guardarSeleccion() {
-        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    function guardarSeleccion(tablaId) {
+        var checkboxes = document.querySelectorAll('#' + tablaId + ' input[type="checkbox"]');
         var nombreSeleccionado = '';
 
         checkboxes.forEach(function (checkbox) {
@@ -288,36 +286,33 @@
         });
 
         if (nombreSeleccionado !== '') {
-            // Crear el botón y el campo de texto
-            var guardarBtn = document.getElementById('guardarBtn');
-            var nombreSeleccionadoInput = document.getElementById('nombreSeleccionado');
-            var csvContent = 'data:text/csv;charset=utf-8,Categoria,Nombre\n';
-
-            // Agregar la fila al CSV
-            csvContent += 'El Más Prieto,' + nombreSeleccionado + '\n';
-
-            // Crear el enlace de descarga
-            var encodedUri = encodeURI(csvContent);
-            var link = document.createElement('a');
-            link.setAttribute('href', encodedUri);
-            link.setAttribute('download', 'seleccion.csv');
-            document.body.appendChild(link);
-
-            // Simular clic en el enlace para iniciar la descarga
-            link.click();
-
-            // Ocultar el botón después de guardar
-            guardarBtn.style.display = 'none';
-
-            // Desactivar los demás checkboxes
-            checkboxes.forEach(function (checkbox) {
-                checkbox.disabled = true;
-            });
+            // Agregar la fila al array de selecciones
+            selecciones.push({ categoria: tablaId, nombre: nombreSeleccionado });
 
             // Mostrar el nombre seleccionado en el campo de texto
+            var nombreSeleccionadoInput = document.getElementById('nombreSeleccionado');
             nombreSeleccionadoInput.value = 'Nombre seleccionado: ' + nombreSeleccionado;
         }
     }
+
+    function guardarEnServidor() {
+        // Enviar las selecciones al servidor mediante Ajax
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'guardar_selecciones.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                alert('Selecciones guardadas exitosamente');
+            } else {
+                alert('Error al guardar las selecciones');
+            }
+        };
+
+        xhr.send(JSON.stringify(selecciones));
+    }
+
+    var selecciones = []; // Array para almacenar las selecciones
 </script>
 
 
