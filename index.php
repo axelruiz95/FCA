@@ -43,6 +43,9 @@
             ?>
         </tr>
     </table>
+    <div id="centradoDiv">
+        <td colspan="3"><h1>El Más Prieto</h1></td>
+    </div>
 
     <table id="segundaTabla" style="display: none;">
         <tr>
