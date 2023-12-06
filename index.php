@@ -20,11 +20,11 @@
         </div>
     </table>
 
+    
+    <table id="miTabla">
     <div id="centradoDiv">
         <td colspan="3"><h1>El Más Prieto</h1></td>
     </div>
-    <table id="miTabla">
-        
         <tr class="opcion">
             <?php
             $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
