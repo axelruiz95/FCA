@@ -33,7 +33,7 @@
             </td>
         </tr>
     </table>
-    
+
     <table id="miTabla">
         <tr>
             <td colspan="3"><h1>El Más Prieto</h1></td>
@@ -50,7 +50,7 @@
                 echo '<label for="check' . $nombre . '" onclick="bloquearOtrasOpciones(this)">';
                 echo   '<img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"> ';
                 echo '</label>';
-                echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
+                echo '<input type="checkbox" id="opcion' . $nombre . '" onclick="seleccionarUnico('"opcion1"')">';
                 echo '</td>';
             }
             ?>
