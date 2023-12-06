@@ -23,7 +23,7 @@
     
     <table id="miTabla">
         <tr>
-        <td colspan="3"><h1>El Más Prieto</h1></td>
+            <td colspan="3"><h1>El Más Prieto</h1></td>
         </tr>
         <tr class="opcion">
             <?php
@@ -255,40 +255,7 @@
             ?>
         </tr>
     </table>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var imagenesAmpliadas = document.querySelectorAll('.imagen-ampliada');
-            imagenesAmpliadas.forEach(function (imagenAmpliada) {
-                imagenAmpliada.addEventListener('click', function () {
-                    imagenAmpliada.style.display = 'none';
-                });
-            });
-
-            var triggers = document.querySelectorAll('.imagen-ampliada-trigger');
-            triggers.forEach(function (trigger) {
-                trigger.addEventListener('click', function (event) {
-                    var imagenAmpliada = trigger.nextElementSibling;
-                    var imagenAmpliadaImg = imagenAmpliada.querySelector('img');
-                    var cerrarBtn = document.createElement('div');
-                    cerrarBtn.innerHTML = '✕';
-                    cerrarBtn.className = 'cerrar';
-                    cerrarBtn.addEventListener('click', function () {
-                        imagenAmpliada.style.display = 'none';
-                    });
-                    imagenAmpliada.appendChild(cerrarBtn);
-
-                    imagenAmpliada.style.display = 'flex';
-                });
-            });
-        });
-
-        function mostrarBotonSiguiente(checkbox) {
-            // Implementa la lógica según tus necesidades
-            // Puedes modificar esta función para que haga lo que desees al seleccionar un checkbox
-        }
-    </script>
-
+    
     <script>
         fetch('styles/header.html')
             .then(response => response.text())
