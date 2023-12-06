@@ -68,7 +68,7 @@
     </table>
 
     <div id="centradoDiv">
-        <button id="botonSiguiente" onclick="mostrar3Tabla()" class="my-button1">Siguiente Categoría</button>
+        <button id="botonSiguiente2" onclick="mostrarTabla('Buena', 'botonSiguiente2', 'botonSiguiente3')" style="display: none;" class="my-button1">Siguiente Categoría</button>
     </div>
 
     <table id="Buena">
@@ -290,6 +290,15 @@
     </script>
     <script src="script.js"></script> 
     <script>
+
+        function mostrarBotonSiguiente(checkbox, botonSiguienteID) {
+            var botonSiguiente = document.getElementById(botonSiguienteID);
+            var botonMostrar = document.getElementById("botonMostrar");
+
+            botonSiguiente.style.display = checkbox.checked ? "inline-block" : "none";
+            botonMostrar.style.display = checkbox.checked ? "none" : "block";
+        }
+
         function mostrarTabla() {
             var tabla = document.getElementById("miTabla");
             var botonMostrar = document.getElementById("botonMostrar");
@@ -299,25 +308,6 @@
             tabla.style.display = "table";
         }
 
-        function mostrarBotonSiguiente(checkbox) {
-            var botonSiguiente = document.getElementById("botonSiguiente");
-            var botonMostrar = document.getElementById("botonMostrar");
-
-            botonSiguiente.style.display = checkbox.checked ? "inline-block" : "none";
-
-            botonMostrar.style.display = checkbox.checked ? "none" : "block";
-        }
-
-        function mostrarSegundaTabla() {
-            var segundaTabla = document.getElementById("segundaTabla");
-
-            segundaTabla.style.display = "table";
-        }
-        function mostrar3Tabla() {
-            var Buena = document.getElementById("Buena");
-
-            Buena.style.display = "table";
-        }
     </script>
     
 </body>
