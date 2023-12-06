@@ -1,21 +1,32 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $selecciones = json_decode(file_get_contents('php://input'), true);
+// Recibe datos JSON del cuerpo de la solicitud POST
+$data = json_decode(file_get_contents("php://input"), true);
 
-    // Crear el contenido del CSV
-    $csvContent = "Categoria,Nombre\n";
-    foreach ($selecciones as $seleccion) {
-        $csvContent .= "{$seleccion['categoria']},{$seleccion['nombre']}\n";
+// Verifica si hay datos recibidos
+if (!empty($data)) {
+    // Genera un nombre de archivo único usando un timestamp
+    $nombreArchivo = 'selecciones_' . date('Ymd_His') . '.csv';
+
+    // Abre o crea el archivo CSV para escritura
+    $archivoCSV = fopen('voto/' . $nombreArchivo, 'a');
+
+    // Encabezados si es un archivo nuevo
+    if (filesize('voto/' . $nombreArchivo) == 0) {
+        fputcsv($archivoCSV, array('Categoria', 'Nombre'));
     }
 
-    // Ruta del archivo en el servidor
-    $archivoCSV = 'voto/selecciones.csv';
+    // Escribe las selecciones en el archivo CSV
+    foreach ($data as $seleccion) {
+        fputcsv($archivoCSV, $seleccion);
+    }
 
-    // Guardar el archivo CSV en el servidor
-    file_put_contents($archivoCSV, $csvContent);
+    // Cierra el archivo CSV
+    fclose($archivoCSV);
 
-    http_response_code(200);
+    // Responde con el nombre del archivo guardado
+    echo json_encode(array('success' => true, 'filename' => $nombreArchivo));
 } else {
-    http_response_code(400);
+    // Responde con error si no hay datos
+    echo json_encode(array('success' => false, 'error' => 'No se recibieron datos.'));
 }
 ?>
