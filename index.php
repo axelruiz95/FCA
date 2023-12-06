@@ -13,7 +13,7 @@
 
     <table>
         <div  id="centradoDiv">
-            <div><h1>Esta son las nominaciones de la Posada 2023</h1></div>
+            <div><h1>Esta son las nominaciones de la Posada 2023 el degenere</h1></div>
         </div>
         <div class="cat">
             <div><h1>Categorias a elegir</h1></div>
@@ -21,7 +21,7 @@
     </table>
 
     <div id="centradoDiv">
-        <td colspan="3"><h1>El Más Prieto</h1></td>
+        <td colspan="3"><h1>El Más Puto</h1></td>
     </div>
     <table id="miTabla">
         
