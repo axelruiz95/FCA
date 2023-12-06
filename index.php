@@ -38,8 +38,7 @@
                 echo '</label>';
                 echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
                 echo '</td>';
-                echo '<button id="guardarBtn" onclick="guardarSeleccion()">Guardar Selección</button>';
-                echo '<input type="text" id="nombreSeleccionado" placeholder="Nombre seleccionado" readonly>';
+                
 
             }
             ?>
