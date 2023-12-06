@@ -33,7 +33,7 @@
                 $nombre = $nombres[$i];
                 echo '<td class="opcion">';
                 echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
-                echo '<label for="check' . $nombre . '" c>';
+                echo '<label for="check' . $nombre . '" onclick="bloquearOtrasOpciones(this)">';
                 echo   '<img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"> ';
                 echo '</label>';
                 echo '<input type="checkbox" id="check' . $nombre . '" onchange="mostrarBotonSiguiente(this)">';
