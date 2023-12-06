@@ -256,6 +256,20 @@
     </table>
 
     <script>
+        function bloquearOtrasOpciones(label) {
+            // Obtener todas las etiquetas de la tabla
+            var etiquetas = document.querySelectorAll('#miTabla label');
+
+            // Desactivar todas las etiquetas excepto la que se hizo clic
+            etiquetas.forEach(function(etiqueta) {
+                if (etiqueta !== label) {
+                    etiqueta.style.pointerEvents = 'none';
+                    etiqueta.style.opacity = '0.5';  // Opcional: Puedes ajustar la opacidad para indicar visualmente que está desactivado
+                }
+            });
+        }
+    </script>
+    <script>
         fetch('styles/header.html')
             .then(response => response.text())
             .then(html => {
