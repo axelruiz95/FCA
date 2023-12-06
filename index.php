@@ -256,15 +256,12 @@
     </table>
 
     <script>
-        function bloquearOtrasOpciones(label) {
-            // Obtener todas las etiquetas de la tabla
-            var etiquetas = document.querySelectorAll('#miTabla label');
+        function seleccionarUnico(id) {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
-            // Desactivar todas las etiquetas excepto la que se hizo clic
-            etiquetas.forEach(function(etiqueta) {
-                if (etiqueta !== label) {
-                    etiqueta.style.pointerEvents = 'none';
-                    etiqueta.style.opacity = '0.5';  // Opcional: Puedes ajustar la opacidad para indicar visualmente que está desactivado
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.id !== id) {
+                    checkbox.checked = false;
                 }
             });
         }
