@@ -19,20 +19,6 @@
             <div><h1>Categorias a elegir</h1></div>
         </div>
     </table>
-
-    <table>
-        <tr>
-            <td>
-                <input type="checkbox" id="opcion1" onclick="seleccionarUnico('opcion1')"> Opción 1
-            </td>
-            <td>
-                <input type="checkbox" id="opcion2" onclick="seleccionarUnico('opcion2')"> Opción 2
-            </td>
-            <td>
-                <input type="checkbox" id="opcion3" onclick="seleccionarUnico('opcion3')"> Opción 3
-            </td>
-        </tr>
-    </table>
     
     <table id="miTabla">
         <tr>
