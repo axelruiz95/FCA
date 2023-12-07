@@ -47,7 +47,7 @@
     }
     ?>
 
-    <table id="Guapo" style="display: none;">
+    <!--<table id="Guapo" style="display: none;">
         <tr>
             <td colspan="3"><h1>El Más Guap@</h1></td>
         </tr>
@@ -257,7 +257,7 @@
                 }
             ?>
         </tr>
-    </table>
+    </table>-->
     <button id="guardarBtn" onclick="guardarSelecciones()">Guardar Selecciones</button>
     <script>
         function seleccionarUnico(id) {
