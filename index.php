@@ -55,7 +55,7 @@
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
                     echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
-                    echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
+                    
                     echo '</td>';
                 }
             ?>
@@ -74,7 +74,7 @@
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
                     echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
-                    echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
+                    
                     echo '</td>';
                 }
             ?>
@@ -93,7 +93,7 @@
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
                     echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
-                    echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
+                    
                     echo '</td>';
                 }
             ?>
@@ -113,7 +113,7 @@
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
                     echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
-                    echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
+                    
                     echo '</td>';
                 }
             ?>
@@ -133,7 +133,7 @@
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
                     echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
-                    echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
+                    
                     echo '</td>';
                 }
             ?>
@@ -153,7 +153,7 @@
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
                     echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
-                    echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
+                    
                     echo '</td>';
                 }
             ?>
@@ -172,7 +172,7 @@
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
                     echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
-                    echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
+                    
                     echo '</td>';
                 }
             ?>
@@ -191,7 +191,7 @@
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
                     echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
-                    echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
+                    
                     echo '</td>';
                 }
             ?>
@@ -210,7 +210,7 @@
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
                     echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
-                    echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
+                    
                     echo '</td>';
                 }
             ?>
@@ -229,7 +229,7 @@
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
                     echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
-                    echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
+                    
                     echo '</td>';
                 }
             ?>
@@ -248,7 +248,7 @@
                     echo '<td>';
                     echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
                     echo '<label for="check' . $nombre . '"><img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"></label>';
-                    echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
+                    
                     echo '</td>';
                 }
             ?>
