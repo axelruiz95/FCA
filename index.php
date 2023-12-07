@@ -276,48 +276,38 @@
 
 <script>
     function guardarSelecciones() {
+        // Obtén las selecciones de todas las tablas
         var selecciones = [];
-
-        // Recorre todas las tablas
         var tablas = document.querySelectorAll('table');
 
-        tablas.forEach(function (tabla, indiceTabla) {
-            // Encuentra la categoría de la tabla
+        tablas.forEach(function (tabla) {
             var categoria = tabla.id;
+            var seleccion = tabla.querySelector('input:checked');
 
-            // Recorre las filas de la tabla
-            var filas = tabla.querySelectorAll('tr.opcion');
-
-            filas.forEach(function (fila, indiceFila) {
-                // Encuentra el nombre y verifica si está seleccionado
-                var nombre = fila.querySelector('input[type="checkbox"]').id.substring(5); // Elimina "check" del ID
-                var seleccionado = fila.querySelector('input[type="checkbox"]').checked;
-
-                // Si está seleccionado, agrega a la lista de selecciones
-                if (seleccionado) {
-                    selecciones.push({
-                        categoria: categoria,
-                        nombre: nombre
-                    });
-                }
-            });
+            if (seleccion) {
+                var nombre = seleccion.id.replace('check', '');
+                selecciones.push({ 'Categoria': categoria, 'Nombre': nombre });
+            }
         });
 
-        // Envía las selecciones al servidor
+        // Realiza la solicitud para guardar las selecciones
         fetch('guardar_selecciones.php', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json'
             },
-            body: JSON.stringify(selecciones),
+            body: JSON.stringify(selecciones)
         })
         .then(response => response.json())
         .then(data => {
-            // Muestra una alerta o realiza acciones adicionales si es necesario
-            console.log('Selecciones guardadas exitosamente', data);
+            if (data.success) {
+                alert('Tus votos fueron guardados. Nombre del archivo: ' + data.filename);
+            } else {
+                alert('Error al guardar los votos: ' + data.error);
+            }
         })
-        .catch((error) => {
-            console.error('Error al guardar selecciones:', error);
+        .catch(error => {
+            console.error('Error:', error);
         });
     }
 </script>
