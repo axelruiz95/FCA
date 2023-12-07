@@ -8,7 +8,7 @@ fputcsv($csvFile, array('Categoria', 'Nombre'));
 
 foreach ($votos as $categoria => $nombres) {
     foreach ($nombres as $nombre) {
-        fputcsv($csvFile, array($categoria, $nombre));
+        fputcsv($csvFile, array('Categoria' => $categoria, 'Nombre' => $nombre));
     }
 }
 
