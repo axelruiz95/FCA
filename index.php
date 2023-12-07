@@ -21,7 +21,7 @@
     </table>
     
     <?php
-    $categorias = array("El_Mas_Prieto", "Otra_Categoria", "Otra_Categoria_Mas"); // Agrega aquí tus categorías
+    $categorias = array("El_Mas_Prieto", "El Más Guap@", "El Más Buena Onda","El Más Odioso"); // Agrega aquí tus categorías
     foreach ($categorias as $categoria) {
         echo '<table id="' . $categoria . '" class="miTabla">';
         echo '  <tr id="encabezado">';
