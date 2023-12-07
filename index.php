@@ -21,7 +21,7 @@
     </table>
     
     <?php
-    $categorias = array("El_Mas_Prieto", "El Más Guap@", "El Más Buena Onda","El Más Odioso","El Más Puto o Todas mías","El Más Borracho","El Más Mala Copa","El Más Fiester","El Más Intens@","El Más Carismatico","El Más Peleoner@","El Más Venenos@"); // Agrega aquí tus categorías
+    $categorias = array("El Mas Prieto","La Mas Prieta", "El Más Guap@", "El Más Buena Onda","El Más Odioso","El Más Puto o Todas mías","El Más Borracho","El Más Mala Copa","El Más Fiester","El Más Intens@","El Más Carismatico","El Más Peleoner@","El Más Venenos@"); // Agrega aquí tus categorías
     foreach ($categorias as $categoria) {
         echo '<table id="' . $categoria . '" class="miTabla">';
         echo '  <tr id="encabezado">';
