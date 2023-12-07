@@ -47,7 +47,8 @@
     }
     ?>
 
-    <button id="guardarBtn" onclick="guardarSelecciones()">Guardar Selecciones</button>
+    <button id="guardarBtn" onclick="guardarSelecciones()">Guardar Votos</button>
+
     <script>
         function seleccionarUnico(id) {
             var checkboxes = document.querySelectorAll('input[type="checkbox"]');
