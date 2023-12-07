@@ -137,7 +137,7 @@
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert('Tus votos fueron guardados. Recuerda un chaqueton pal frio'  + shuffle($nombres) );
+                alert('Tus votos fueron guardados. Recuerda un chaqueton pal frio');
             } else {
                 alert('Error al guardar los votos: ' + data.error);
             }
