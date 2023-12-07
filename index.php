@@ -20,28 +20,32 @@
         </div>
     </table>
     
-    <table id="Prieto">
-        <tr>
-            <td colspan="3"><h1>El Más Prieto</h1></td>
-        </tr>
-        <tr class="opcion">
-            <?php
-            $nombres = array("axel", "Eliot", "Sergio","Tony","Ana","Rogelio","Pancho","Octavio","Jaz","Cari","Cejota","Pako","Olimpia","Alan","Mari","Miguel","Markitos","Toño","Ubaldo","Braian","Jax");
-            shuffle($nombres);
+    <?php
+    $categorias = array("El_Mas_Prieto", "Otra_Categoria", "Otra_Categoria_Mas"); // Agrega aquí tus categorías
+    foreach ($categorias as $categoria) {
+        echo '<table id="' . $categoria . '" class="miTabla">';
+        echo '  <tr id="encabezado">';
+        echo '      <td colspan="3"><h1>' . str_replace('_', ' ', $categoria) . '</h1></td>';
+        echo '  </tr>';
+        echo '  <tr class="opcion">';
+        
+        $nombres = array("axel", "Eliot", "Sergio", "Tony", "Ana", "Rogelio", "Pancho", "Octavio", "Jaz", "Cari", "Cejota", "Pako", "Olimpia", "Alan", "Mari", "Miguel", "Markitos", "Toño", "Ubaldo", "Braian", "Jax");
+        shuffle($nombres);
 
-            for ($i = 0; $i < 21; $i++) {
-                $nombre = $nombres[$i];
-                echo '<td class="opcion">';
-                echo '<div class="text-overlay">'. ucfirst($nombre) .'</div>';
-                echo '<label for="check' . $nombre . '" onclick="bloquearOtrasOpciones(this)">';
-                echo   '<img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"> ';
-                echo '</label>';
-                echo '<input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
-                echo '</td>';
-            }
-            ?>
-        </tr>
-    </table>
+        foreach ($nombres as $nombre) {
+            echo '      <td class="opcion">';
+            echo '          <div class="text-overlay">' . ucfirst($nombre) . '</div>';
+            echo '          <label for="check' . $nombre . '">';
+            echo '              <img src="image/' . $nombre . '.jpeg" alt="' . ucfirst($nombre) . '" style="width: 100px; height: 150px;"> ';
+            echo '          </label>';
+            echo '          <input type="checkbox" id="check' . $nombre . '" onclick="seleccionarUnico(\'check' . $nombre . '\')">';
+            echo '      </td>';
+        }
+
+        echo '  </tr>';
+        echo '</table>';
+    }
+    ?>
 
     <table id="Guapo" style="display: none;">
         <tr>
