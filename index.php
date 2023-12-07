@@ -50,16 +50,58 @@
     <button id="guardarBtn" onclick="guardarSelecciones()">Guardar Votos</button>
 
     <script>
-        function seleccionarUnico(id) {
-            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    var votos = {};
 
-            checkboxes.forEach(function(checkbox) {
-                if (checkbox.id !== id) {
-                    checkbox.checked = false;
-                }
-            });
+    function seleccionarUnico(id) {
+        // ... tu código existente ...
+        actualizarVotos();
+    }
+
+    function actualizarVotos() {
+        votos = {};
+        // Recorre todas las tablas y obtén las opciones seleccionadas
+        <?php
+        foreach ($categorias as $categoria) {
+            echo 'votos.' . $categoria . ' = obtenerSeleccion(\'' . $categoria . '\');' . PHP_EOL;
         }
-    </script>
+        ?>
+
+        console.log(votos);
+    }
+
+    function obtenerSeleccion(categoria) {
+        var opciones = document.querySelectorAll('#' + categoria + ' input[type="checkbox"]');
+        var seleccion = [];
+
+        opciones.forEach(function (opcion) {
+            if (opcion.checked) {
+                seleccion.push(opcion.id.replace('check', ''));
+            }
+        });
+
+        return seleccion;
+    }
+
+    function guardarVotos() {
+        actualizarVotos();
+
+        // Envía los datos al archivo PHP para procesar y guardar en CSV
+        fetch('guardar_selecciones.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(votos),
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    }
+</script>
     <script>
         fetch('styles/header.html')
             .then(response => response.text())
